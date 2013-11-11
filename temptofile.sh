@@ -14,8 +14,8 @@ echo "Restoring /tmp..."
 mv /temp_tmp/* /tmp
 rm -rf /temp_tmp
 echo "Write to mount command to /etc/fstab..."
-echo “/tempfile /tmp ext3 loop,rw,noexec,nosuid,nodev 0 0″ >> /etc/fstab
+echo "/tempfile /tmp ext3 loop,rw,noexec,nosuid,nodev 0 0" >> /etc/fstab
 echo "Linking /var/tmp..."
 rm -rf /var/tmp
-link -s /tmp /var/tmp
+ln -s /tmp /var/tmp
 echo "Done."
